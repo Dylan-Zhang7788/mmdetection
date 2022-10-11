@@ -8,9 +8,9 @@ from mmdet.apis import (async_inference_detector, inference_detector,
 
 def parse_args():
     parser = ArgumentParser()
-    parser.add_argument('img', help='Image file')
-    parser.add_argument('config', help='Config file')
-    parser.add_argument('checkpoint', help='Checkpoint file')
+    parser.add_argument('--img', help='Image file',default='demo.jpg')
+    parser.add_argument('--config', help='Config file',default='../configs/faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py')
+    parser.add_argument('--checkpoint', help='Checkpoint file',default='../checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth')
     parser.add_argument('--out-file', default=None, help='Path to output file')
     parser.add_argument(
         '--device', default='cuda:0', help='Device used for inference')
